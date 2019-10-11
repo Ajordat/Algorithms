@@ -7,16 +7,16 @@ class Graph(BaseGraph):
         self._assert_node_is_in_graph(node1)
         self._assert_node_is_in_graph(node2)
 
-        if node2 not in self.g[node1]:
-            self.g[node1].append(node2)
-        if node1 not in self.g[node2]:
-            self.g[node2].append(node1)
+        if node2 not in self._g[node1]:
+            self._g[node1].append(node2)
+        if node1 not in self._g[node2]:
+            self._g[node2].append(node1)
 
     def __dfs(self, current_node, checked):
         print(current_node)
         checked.append(current_node)
 
-        for vertex in self.g[current_node]:
+        for vertex in self._g[current_node]:
             if vertex not in checked:
                 self.__dfs(vertex, checked)
 
@@ -28,7 +28,7 @@ class Graph(BaseGraph):
         print(current_node)
         checked.append(current_node)
 
-        for vertex in self.g[current_node]:
+        for vertex in self._g[current_node]:
             if vertex not in checked:
                 following.append(vertex)
         if following:
@@ -43,7 +43,7 @@ class Graph(BaseGraph):
         checked.append(node1)
         if node1 == node2:
             return path
-        for vertex in self.g[node1]:
+        for vertex in self._g[node1]:
             if vertex not in checked:
                 result = self.__find_path(vertex, node2, path, checked)
                 if result:

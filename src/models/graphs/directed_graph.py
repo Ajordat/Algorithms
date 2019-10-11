@@ -7,5 +7,5 @@ class DirectedGraph(BaseGraph):
         self._assert_node_is_in_graph(node1)
         self._assert_node_is_in_graph(node2)
 
-        if node2 not in self.g[node1]:
-            self.g[node1].append(node2)
+        if node2 not in self._g[node1]:
+            self._g[node1].append(node2)
