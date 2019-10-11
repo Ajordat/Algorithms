@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/Ajordat/Algorithms.png?branch=master)](https://travis-ci.com/Ajordat/Algorithms)
+![Build Status](https://travis-ci.com/Ajordat/Algorithms.svg?token=Pckjm48mDuVXcGjbjsLk&branch=master)
 
 # Algorithms 
 
