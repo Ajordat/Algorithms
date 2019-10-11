@@ -1,4 +1,5 @@
-from abc import abstractmethod, ABC
+from abc import ABC
+from abc import abstractmethod
 
 
 class BaseGraph(ABC):
@@ -21,7 +22,7 @@ class BaseGraph(ABC):
         return self._g[node]
 
     @abstractmethod
-    def add_edge(self, node1, node2):
+    def add_edge(self, node1, node2, **kwargs):
         pass
 
     def __str__(self):
@@ -32,3 +33,6 @@ class BaseGraph(ABC):
 
     def __getitem__(self, item):
         return self._g[item]
+
+    def __len__(self):
+        return len(self._g)
