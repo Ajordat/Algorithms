@@ -10,5 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: python -m unittest -v
+- script:
+    pwd
+    python -m unittest -v
   displayName: 'Run tests'
