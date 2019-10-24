@@ -25,3 +25,5 @@ class TestGraphAlgorithms(unittest.TestCase):
         self.assertEqual(result_d, {'A': 20, 'B': 15, 'C': 11, 'D': 0, 'E': 6, 'F': 13})
         self.assertEqual(result_e, {'A': 20, 'B': 21, 'C': 11, 'D': 6, 'E': 0, 'F': 9})
         self.assertEqual(result_f, {'A': 11, 'B': 12, 'C': 2, 'D': 13, 'E': 9, 'F': 0})
+
+        self.assertRaises(KeyError, solver.dijkstra, g, 'X')
