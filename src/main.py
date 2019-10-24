@@ -1,5 +1,6 @@
 from src.algorithms.graph_algorithms import GraphAlgorithms
 from src.models.graphs.weighted_graph import WeightedGraph
+from src.models.trees.binary_tree import BinaryTree
 
 graph = WeightedGraph()
 
@@ -26,3 +27,14 @@ solver = GraphAlgorithms()
 
 res = solver.dijkstra(graph, 'A')
 print(f"Dijkstra: {res}")
+
+tree = BinaryTree()
+
+tree.add_value(1)
+tree.add_value(2)
+tree.add_value(3)
+tree.add_value(4)
+tree.add_value(2)
+
+print(tree)
+print(tree.search(3))
