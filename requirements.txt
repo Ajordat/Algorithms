@@ -9,5 +9,5 @@ pre-commit==1.18.3
 PyYAML==5.4
 six==1.12.0
 toml==0.10.0
-virtualenv==16.7.5
+virtualenv==20.26.6
 zipp==3.19.1
